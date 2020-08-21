@@ -1,0 +1,162 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* main color */
+
+main {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+/* header */
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+}
+
+ul {
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+}
+
+li {
+    margin: 0 15px; 
+    display: inline;
+    text-align: center;
+}
+
+header {
+    border-bottom: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: black;
+    background-color: #ED6A5E;
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 15px;
+}
+
+header a:link {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header a:visited {
+    color: white;
+}
+
+/* form */
+
+label, input, button {
+    margin: 5px;
+}
+
+/* AQI and temp results */
+
+.aqi-temp-results {
+    border: solid;
+}
+
+.hidden {
+    display: none;
+}
+
+/* map */
+
+iframe {
+    width: 100%;
+}
+
+.form-and-results, .map-results {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* AQI guide */
+
+img {
+    margin-top: 20px;
+    width: 100%;
+} 
+
+.aqi-guide p {
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* contact page */
+
+textarea {
+    width: 100%; 
+    height: 250px;
+    margin-top: 5px;
+}
+
+.contact form {
+    text-align: center;
+    margin: 0 10px;
+}
+
+/* media query */
+
+@media all and (min-width: 800px) {
+
+    img {
+        width: 600px;
+        height: 600px;
+    }
+
+    .form-and-results {
+        display: inline-flex;
+        flex-direction: column;
+        width: 30%;
+        float: left;
+        padding: 10px;
+    }
+
+    .map-results {
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .aqi-temp-results hidden {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .map-results {
+        width: 68%;
+        height: 100%;
+        border-left: solid; 
+        border-left-width: 1.3px;
+        float: right;
+    }
+
+    textarea {
+        width: 500px; 
+        height: 250px;
+        margin-top: 5px;
+    }
+    
+    .contact form {
+        text-align: left;
+        margin-left: 10px;
+    }
+} 
