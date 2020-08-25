@@ -2,13 +2,11 @@ body {
     text-align: center;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
 }
-
-/* main color */
 
 main {
     margin: 0;
-    background-color: whitesmoke;
 }
 
 /* header */
@@ -73,6 +71,34 @@ label, input, button {
     display: none;
 }
 
+.green {
+    background-color: #2EDF5C;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: #FF2222;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.maroon {
+    background-color: maroon;
+}
+
+.no-background {
+    background-color: transparent;
+}
+
 /* map */
 
 iframe {
@@ -84,7 +110,6 @@ iframe {
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    width: 100%;
 }
 
 /* AQI guide */
@@ -114,7 +139,16 @@ textarea {
     margin: 0 10px;
 }
 
-/* media query */
+/* media query for ipad/tablet */
+
+@media all and (min-width: 600px) {
+    img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+/* media query for desktop */
 
 @media all and (min-width: 800px) {
 

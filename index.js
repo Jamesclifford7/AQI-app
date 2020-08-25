@@ -1,4 +1,4 @@
-/* Get city and state input value */
+/* get city and state input value */
 
 function getCityValue() {
     const city = $('#city').val();
@@ -19,14 +19,17 @@ function getAqi() {
         })
         .then(function(responseJsonAqi){
             if (responseJsonAqi.status === 'success') {
-                return displayAqiResults(responseJsonAqi)
+                return displayAqiResults(responseJsonAqi) 
             } else {
                 throw new Error
             } 
         })
         .catch(function(error){
+            $('.aqi-temp-results').removeClass('hidden');
+            $('.aqi-temp-results').addClass('no-background');
             $('.aqi-results').html('<p>Oops! We cannot find the AQI for this location. Please enter a U.S. City and State.</p>');
-            $('.map-results').html('<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApS1VF4GSnDqqOFg6MoMn_8PAVjuBYjPo&q=united states" allowfullscreen></iframe>');
+            $('.temp-results').empty();
+            $('.map-results').html('<iframe width="600" height="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApS1VF4GSnDqqOFg6MoMn_8PAVjuBYjPo&q=united states" allowfullscreen></iframe>');
         });
 } 
 
@@ -34,6 +37,7 @@ function getAqi() {
 
 function displayAqiResults(responseJsonAqi) {
     $('.aqi-temp-results').removeClass('hidden');
+    addColor(responseJsonAqi);
     $('.aqi-results').html(`<h3>The AQI for ${getCityValue()} is: ${responseJsonAqi.data.current.pollution.aqius}</h3>`);
 }
 
@@ -62,10 +66,29 @@ function displayTempResults(responseJsonTemp) {
     $('.temp-results').html(`<h3>Current Temperature: ${responseJsonTemp.main.temp} °F</h3>`)
 }
 
+/* add colors to results */ 
+
+function addColor(responseJsonAqi) {
+    $('.aqi-temp-results').removeClass('no-background green yellow orange red purple');
+    if (responseJsonAqi.data.current.pollution.aqius <= 50) {
+        $('.aqi-temp-results').addClass('green');
+    } else if (responseJsonAqi.data.current.pollution.aqius <= 100) {
+        $('.aqi-temp-results').addClass('yellow');
+    } else if (responseJsonAqi.data.current.pollution.aqius <= 150) {
+        $('.aqi-temp-results').addClass('orange');
+    } else if (responseJsonAqi.data.current.pollution.aqius <= 200) {
+        $('.aqi-temp-results').addClass('red');
+    } else if (responseJsonAqi.data.current.pollution.aqius <= 250) {
+        $('.aqi-temp-results').addClass('purple');
+    } else {
+        $('.aqi-temp-results').addClass('maroon');
+    };
+} 
+
 /* display google maps location */
 
 function displayLocation() {
-    $('.map-results').html(`<iframe width="500" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApS1VF4GSnDqqOFg6MoMn_8PAVjuBYjPo&q=${getCityValue()}" allowfullscreen></iframe>`);
+    $('.map-results').html(`<iframe width="600" height="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApS1VF4GSnDqqOFg6MoMn_8PAVjuBYjPo&q=${getCityValue()}" allowfullscreen></iframe>`);
 }
 
 /* watch app */
