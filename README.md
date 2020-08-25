@@ -17,4 +17,6 @@ have a visual representation of the city you entered. There is also a page that 
 
 ![AQI contact page](/screenshots/AQI-screenshot5.png)
 
+## Link to Demo Site
 
+https://jamesclifford7.github.io/AQI-app/
