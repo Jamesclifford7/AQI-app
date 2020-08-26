@@ -136,7 +136,7 @@ function getAqi() {
             $('.aqi-temp-results').addClass('no-background');
             $('.aqi-results').html(errorMessage);
             $('.temp-results').empty();
-            $('.map-results').html('<iframe width="600" height="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApS1VF4GSnDqqOFg6MoMn_8PAVjuBYjPo&q=united+states" allowfullscreen></iframe>');
+            $('.map-results').html(mapsHome);
         });
 } 
 
@@ -146,14 +146,18 @@ function AqiResultsMessage(responseJsonAqi) {
     return `<h3>The AQI for ${getDisplayCity()} is: ${responseJsonAqi.data.current.pollution.aqius}</h3>`
 }
 
-function errorMessage() {
-    return '<p>Oops! We cannot find the AQI for this location. Please enter a U.S. City and State.</p>'
-}
-
 function displayAqiResults(responseJsonAqi) {
     $('.aqi-temp-results').removeClass('hidden');
     addColor(responseJsonAqi);
     $('.aqi-results').html(AqiResultsMessage(responseJsonAqi));
+}
+
+function errorMessage() {
+    return '<p>Oops! We cannot find the AQI for this location. Please enter a U.S. City and State.</p>'
+}
+
+function mapsHome() {
+    return '<iframe width="600" height="600" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApS1VF4GSnDqqOFg6MoMn_8PAVjuBYjPo&q=united+states" allowfullscreen></iframe>'
 }
 
 /* retrieve current weather for city */
