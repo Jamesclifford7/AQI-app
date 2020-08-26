@@ -7,14 +7,16 @@ have a visual representation of the city you entered. There is also a page that 
 
 ## Screenshots
 
-![AQI homepage](/desktop/AQI-screenshot1.png)
+![AQI homepage](/screenshots/AQI-screenshot1.png)
 
-![AQI LA Example](/desktop/AQI-screenshot2.png)
+![AQI LA Example](/screenshots/AQI-screenshot2.png)
 
-![AQI guide page](/desktop/AQI-screenshot3.png)
+![AQI guide page](/screenshots/AQI-screenshot3.png)
 
-![AQI chart](/desktop/AQI-screenshot4.png)
+![AQI chart](/screenshots/AQI-screenshot4.png)
 
-![AQI contact page](/desktop/AQI-screenshot5.png)
+![AQI contact page](/screenshots/AQI-screenshot5.png)
 
+## Link to Demo Site
 
+https://jamesclifford7.github.io/AQI-app/
