@@ -7,15 +7,13 @@ have a visual representation of the city you entered. There is also a page that 
 
 ## Screenshots
 
-![AQI homepage](/screenshots/AQI-screenshot1.png)
+![AQI homepage](/screenshots/AQI-Lookup-Screenshot1.png)
 
-![AQI LA Example](/screenshots/AQI-screenshot2.png)
+![AQI LA Example](/screenshots/AQI-Lookup-Screenshot2.png)
 
-![AQI guide page](/screenshots/AQI-screenshot3.png)
+![AQI chart](/screenshots/AQI-Lookup-Screenshot3.png)
 
-![AQI chart](/screenshots/AQI-screenshot4.png)
-
-![AQI contact page](/screenshots/AQI-screenshot5.png)
+![AQI contact page](/screenshots/AQI-Lookup-Screenshot4.png)
 
 ## Link to Demo Site
 
