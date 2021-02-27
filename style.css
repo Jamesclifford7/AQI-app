@@ -32,7 +32,8 @@ header {
     border-bottom: solid;
     border-bottom-width: 1.3px;
     border-bottom-color: black;
-    background-color: #ED6A5E; 
+    /* background-color: #ED6A5E; */
+    background-color: #9381FF; 
     color: white;
     margin: 0;
 }
@@ -150,7 +151,7 @@ textarea {
 
 /* media query for desktop */
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 1200px) {
 
     img {
         width: 600px;
