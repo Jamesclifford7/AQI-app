@@ -120,8 +120,9 @@ function getStateValue() {
 /* retrieve Air Quality Index for City */
 
 function getAqi() {
-    fetch(`https://api.airvisual.com/v2/city?city=${getCityValue()}&state=${getStateValue()}&country=USA&key=b5aa4c6e-6bbe-43e4-b1eb-11792676fa0c`)
+    fetch(`https://api.airvisual.com/v2/city?city=${getCityValue()}&state=${getStateValue()}&country=USA&key=14d8b66d-9fe0-47b2-907d-25a27dac273d`)
         .then(function(response) {
+            console.log(response)
             return response.json()
         })
         .then(function(responseJsonAqi){
